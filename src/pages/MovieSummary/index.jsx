@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import useFetchSingleShow from "../../hooks/useFetchSingleShow";
 
@@ -25,7 +25,9 @@ function MovieSummary() {
           <div className="summary">
             <h3>{data.name}</h3>
             <p>{sanitizeHTML(data.summary)}</p>
-            <button>Book a Ticket</button>
+            <Link to={`/movie/ticket?title=${data.name}`}>
+              <button>Book a Ticket</button>
+            </Link>
           </div>
         </div>
       </div>
