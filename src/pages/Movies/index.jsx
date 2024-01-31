@@ -21,7 +21,7 @@ function Movies() {
       <section>
         <div className="container">
           <SiteHeading />
-          <SearchBox />
+          {/* <SearchBox /> */}
 
           <div className="movies__container">
             {data &&
