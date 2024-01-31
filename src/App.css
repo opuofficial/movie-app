@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+    /* border: 2px solid red; */
+    
+}
+
+.heading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.search__box {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 30px;
+}
+
+.search__box .input__group {
+    padding: 10px;
+    border: 2px solid rgb(236, 236, 236);
+    border-radius: 5px;
+}
+
+.search__box .input__group input {
+    border: none;
+    outline: none;
+    width: 300px;
+}
+
+.movies__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.movie__item {
+    transition: transform .3s;
+} 
+
+.movie__item:hover {
+    transform: scale(.985);
+} 
+
+.movie__item .movie__poster img {
+    width: 100%;
+    border-radius: 10px;
+} 
+
+.movie__item .movie__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.movie__item .genres {
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.movie__item .genres span {
+    background: rgb(0, 163, 218);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: .7rem;
+}
+
+.movie__item__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie__item__footer .rating i {
+    color: orange;
+}
+
+.movie__item__footer button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.movie__summary {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0 50px 0;
+}
+
+.movie__summary .movie__poster {
+    flex: 3;
+}
+
+.movie__summary .movie__poster img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie__summary .summary {
+    flex: 7;
+}
+
+.movie__summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.movie__summary p {
+    line-height: 22px;
+    text-align: justify;
+}
+
+.movie__summary button {
+    border: none;
+    outline: none;
+    padding: 15px 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 lightgray;
+}
+
+.movie__summary button:active {
+    box-shadow: 0 0 0 lightgray;
+    transform: translate(3px, 3px);
+}
+
+.book__ticket__form {
+    margin-top: 30px;
+}
+
+.book__ticket__form h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.book__ticket__form form {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.book__ticket__form .input__group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.book__ticket__form .input__group input {
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+.book__ticket__form button {
+    padding: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .movies__container {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .movie__summary .movie__poster {
+        flex: 4;
+    }
+    
+    .movie__summary .summary {
+        flex: 6;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .movies__container {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .movie__summary {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .movies__container {
+        grid-template-columns: 1fr;
+
+    }
+}
