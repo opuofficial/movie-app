@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function MovieCard({ movie }) {
   const {
+    id,
     name,
     premiered,
     genres,
@@ -26,12 +28,16 @@ function MovieCard({ movie }) {
       </div>
       <div className="movie__item__footer">
         <div className="rating">
-          <span>
-            <i className="fa-solid fa-star"></i>
-          </span>
+          {average && (
+            <span>
+              <i className="fa-solid fa-star"></i>
+            </span>
+          )}
           <span>{average}</span>
         </div>
-        <button>Summary</button>
+        <Link to={`/movie/${id}`}>
+          <button>Summary</button>
+        </Link>
       </div>
     </div>
   );
